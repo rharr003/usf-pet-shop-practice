@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+{% for pet in pets %}
+    <li>
+        <a href="/{{pet.id}}"><p>{{pet.name}}</p></a>
+        {% if pet.photo_url %}
+            <img src="{{pet.photo_url}}">
+        {% endif %}
+        {% if pet.available %}
+        <p><strong>AVAILABLE</strong></p>
+        {% endif %}
+    </li>
+{% endfor %}
+</ul>
+
+</body>
+</html>

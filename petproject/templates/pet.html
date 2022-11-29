@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>{{pet.name}}</h1>
+{% if pet.photo_url %}
+<img src="{{pet.photo_url}}">
+{% endif %}
+<p>{{pet.age}}</p>
+<p>{{pet.species}}</p>
+<p>{{pet.notes}}</p>
+<a href="/edit/{{pet.id}}"><button>Edit</button></a>
+</body>
+</html>
